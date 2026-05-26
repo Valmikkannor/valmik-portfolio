@@ -76,7 +76,7 @@ export const projects = [{
         accentColor: "#7c5cfc",
         bgGradient: "rgba(124,92,252,0.12)",
         liveUrl: "#",
-        githubUrl: "#",
+        githubUrl: "github.com/valmikkannor",
         coming: false,
     },
     // {

@@ -7,27 +7,33 @@ export default function Hero() {
     <section
       id="hero"
       className="
-      min-h-screen
+      min-h-[35vh]
       flex
       items-center
-      justify-center
       relative
       z-10
-      pt-[100px]
+      pt-28
+      pb-12
       px-6
-      transition-all
-      duration-500
+      
       "
     >
       <div className="max-w-6xl mx-auto w-full">
 
-        <div className="grid md:grid-cols-2 gap-14 items-center">
+        <div
+          className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          gap-10
+          md:gap-14
+          items-center
+          "
+        >
 
           {/* LEFT CONTENT */}
 
-          <div>
-
-            {/* Badge */}
+          <div className="order-2 md:order-1">
 
             <Reveal delay={0}>
               <div
@@ -40,7 +46,6 @@ export default function Hero() {
                 py-2
                 text-xs
                 font-semibold
-                tracking-wide
                 mb-6
 
                 bg-white/70
@@ -70,8 +75,6 @@ export default function Hero() {
               </div>
             </Reveal>
 
-            {/* Heading */}
-
             <Reveal delay={100}>
               <h1
                 className="
@@ -79,12 +82,12 @@ export default function Hero() {
                 font-extrabold
                 leading-none
                 tracking-tight
-                mb-3
+                mb-4
                 text-gray-900
                 dark:text-white
                 "
                 style={{
-                  fontSize: "clamp(2.8rem,6vw,5rem)",
+                  fontSize: "clamp(2.5rem,8vw,5rem)",
                 }}
               >
                 Valmik
@@ -104,12 +107,9 @@ export default function Hero() {
               </h1>
             </Reveal>
 
-            {/* Title */}
-
             <Reveal delay={200}>
               <p
                 className="
-                font-display
                 font-semibold
                 mb-5
                 text-lg
@@ -121,14 +121,12 @@ export default function Hero() {
               </p>
             </Reveal>
 
-            {/* Description */}
-
             <Reveal delay={300}>
               <p
                 className="
                 text-base
                 leading-relaxed
-                mb-10
+                mb-8
                 max-w-lg
                 text-gray-600
                 dark:text-[#8891aa]
@@ -140,28 +138,33 @@ export default function Hero() {
               </p>
             </Reveal>
 
-            {/* Buttons */}
+            {/* BUTTONS */}
 
             <Reveal delay={400}>
-              <div className="flex flex-wrap gap-4">
-
-                {/* Projects */}
+              <div
+                className="
+                flex
+                flex-col
+                sm:flex-row
+                gap-4
+                "
+              >
 
                 <a
                   href="#projects"
                   className="
                   inline-flex
+                  justify-center
                   items-center
                   gap-2
-                  px-7
-                  py-3.5
+                  px-6
+                  py-3
                   rounded-xl
-                  text-sm
                   font-bold
+
+                  hover:-translate-y-1
                   transition-all
                   duration-300
-                  hover:-translate-y-1
-                  hover:shadow-2xl
                   "
                   style={{
                     background:
@@ -169,12 +172,8 @@ export default function Hero() {
                     color: "#050810",
                   }}
                 >
-                  <i className="fas fa-code" />
-
                   View Projects
                 </a>
-
-                {/* Resume */}
 
                 <a
                   href={Resume}
@@ -182,16 +181,12 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   className="
                   inline-flex
+                  justify-center
                   items-center
                   gap-2
-                  px-7
-                  py-3.5
+                  px-6
+                  py-3
                   rounded-xl
-                  text-sm
-                  font-semibold
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
 
                   bg-white/70
                   dark:bg-white/5
@@ -200,50 +195,38 @@ export default function Hero() {
                   border-gray-300
                   dark:border-white/10
 
-                  backdrop-blur-xl
-
-                  text-gray-800
-                  dark:text-white
-
                   hover:border-cyan-400
                   hover:text-cyan-400
+
+                  transition-all
+                  duration-300
                   "
                 >
-                  <i className="fas fa-download" />
-
                   Resume
                 </a>
-
-                {/* Contact */}
 
                 <a
                   href="#contact"
                   className="
                   inline-flex
+                  justify-center
                   items-center
                   gap-2
-                  px-7
-                  py-3.5
+                  px-6
+                  py-3
                   rounded-xl
-                  text-sm
-                  font-semibold
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
 
                   border
                   border-gray-300
                   dark:border-white/10
 
-                  text-gray-700
-                  dark:text-[#8891aa]
-
                   hover:border-purple-500
                   hover:text-purple-500
+
+                  transition-all
+                  duration-300
                   "
                 >
-                  <i className="fas fa-paper-plane" />
-
                   Contact
                 </a>
 
@@ -257,11 +240,10 @@ export default function Hero() {
           <Reveal
             delay={200}
             className="
+            order-1
+            md:order-2
             flex
-            items-center
             justify-center
-            order-first
-            md:order-last
             "
           >
             <div
@@ -276,10 +258,13 @@ export default function Hero() {
               "
             >
 
-              {/* Animated Ring */}
-
               <div
-                className="absolute inset-[-16px] rounded-full opacity-60"
+                className="
+                absolute
+                inset-[-16px]
+                rounded-full
+                opacity-60
+                "
                 style={{
                   background:
                     "conic-gradient(from 0deg,#00d9ff,#7c5cfc,#ff4da6,#00d9ff)",
@@ -288,20 +273,15 @@ export default function Hero() {
                 }}
               />
 
-              {/* Ring Gap */}
-
               <div
                 className="
                 absolute
                 inset-[-13px]
                 rounded-full
-
                 bg-white
                 dark:bg-[#050810]
                 "
               />
-
-              {/* Avatar */}
 
               <div
                 className="
@@ -311,18 +291,8 @@ export default function Hero() {
                 h-full
                 rounded-full
                 overflow-hidden
-                flex
-                items-center
-                justify-center
                 "
-                style={{
-                  background:
-                    "linear-gradient(135deg,#7c5cfc,#00d9ff)",
-                  boxShadow:
-                    "0 0 60px rgba(124,92,252,.35)",
-                }}
               >
-
                 <img
                   src={Profile}
                   alt="Valmik"
@@ -333,10 +303,7 @@ export default function Hero() {
                   rounded-full
                   "
                 />
-
               </div>
-
-              {/* Stats */}
 
               <div
                 className="
@@ -344,12 +311,11 @@ export default function Hero() {
                 flex
                 flex-col
                 gap-2
-                bottom-[-15px]
-                left-[-10px]
-                sm:left-[-35px]
+                bottom-[-20px]
+                left-0
+                sm:left-[-15px]
                 "
               >
-
                 <StatCard
                   num="6+"
                   label="Months Experience"
@@ -359,7 +325,6 @@ export default function Hero() {
                   num="3+"
                   label="Projects Built"
                 />
-
               </div>
 
             </div>
@@ -371,11 +336,12 @@ export default function Hero() {
 
       <style>{`
         @keyframes spin {
-          to {
-            transform: rotate(360deg);
+          to{
+            transform:rotate(360deg);
           }
         }
       `}</style>
+
     </section>
   );
 }
@@ -401,8 +367,7 @@ function StatCard({ num, label }) {
     >
       <div
         className="
-        font-display
-        font-extrabold
+        font-bold
         text-2xl
         bg-gradient-to-r
         from-cyan-400
