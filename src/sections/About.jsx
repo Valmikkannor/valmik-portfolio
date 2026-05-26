@@ -33,29 +33,43 @@ export default function About() {
     <section
       id="about"
       className="
-      py-24
+      py-20
       relative
       z-10
-
       bg-[#f8fafc]
       dark:bg-[#080c18]
-
       transition-all
       duration-500
+      overflow-hidden
       "
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div
+        className="
+        max-w-6xl
+        mx-auto
+        px-4
+        sm:px-6
+        "
+      >
+        <div
+          className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          gap-8
+          md:gap-16
+          items-center
+          "
+        >
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-
-          {/* Left Code Card */}
+          {/* LEFT SIDE */}
 
           <Reveal from="left">
-
             <div
               className="
               rounded-2xl
-              p-10
+              p-6
+              sm:p-10
               relative
               overflow-hidden
 
@@ -69,11 +83,8 @@ export default function About() {
               backdrop-blur-xl
 
               shadow-lg
-              dark:shadow-none
               "
             >
-
-              {/* Top Gradient Bar */}
 
               <div
                 className="
@@ -88,8 +99,7 @@ export default function About() {
                     "linear-gradient(90deg,#00d9ff,#7c5cfc,#ff4da6)",
                 }}
               />
-
-              <pre
+               <pre
                 className="text-sm leading-loose overflow-x-auto"
                 style={{ fontFamily: "'Courier New', monospace" }}
               >
@@ -118,10 +128,9 @@ export default function About() {
               </pre>
 
             </div>
-
           </Reveal>
 
-          {/* Right Content */}
+          {/* RIGHT SIDE */}
 
           <div>
 
@@ -138,15 +147,16 @@ export default function About() {
                 text-base
                 leading-relaxed
                 mb-4
-
                 text-slate-600
                 dark:text-[#8891aa]
                 "
               >
-                I'm a passionate MERN Stack Developer
-                with a strong focus on building
-                full-stack web applications that are
-                functional and visually compelling.
+                I'm a passionate MERN Stack
+                Developer with a strong focus
+                on building full-stack web
+                applications that are
+                functional and visually
+                compelling.
               </p>
 
               <p
@@ -154,25 +164,25 @@ export default function About() {
                 text-base
                 leading-relaxed
                 mb-8
-
                 text-slate-600
                 dark:text-[#8891aa]
                 "
               >
-                With hands-on backend experience,
-                I bring a deep understanding of
-                server-side logic, REST APIs,
-                and database architecture
-                combined with React-powered
-                frontends that create smooth
-                user experiences.
+                With hands-on backend
+                experience, I bring a deep
+                understanding of server-side
+                logic, REST APIs and database
+                architecture combined with
+                React-powered frontends that
+                create smooth user
+                experiences.
               </p>
 
             </Reveal>
 
-            {/* Highlight Cards */}
+            {/* HIGHLIGHT CARDS */}
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-4">
 
               {highlights.map((h, i) => (
 
@@ -184,7 +194,7 @@ export default function About() {
                   <div
                     className="
                     flex
-                    items-center
+                    items-start
                     gap-3
                     px-4
                     py-4
@@ -198,11 +208,8 @@ export default function About() {
                     dark:border-white/10
 
                     shadow-md
-                    dark:shadow-none
 
                     hover:scale-[1.02]
-                    hover:shadow-xl
-                    dark:hover:shadow-none
 
                     transition-all
                     duration-300
@@ -214,10 +221,11 @@ export default function About() {
                       w-10
                       h-10
                       rounded-xl
+
                       flex
                       items-center
                       justify-center
-                      text-sm
+
                       flex-shrink-0
                       "
                       style={{
@@ -225,12 +233,16 @@ export default function About() {
                         color: h.color,
                       }}
                     >
-                      <i className={`fas ${h.icon}`} />
+                      <i
+                        className={`fas ${h.icon}`}
+                      />
                     </div>
 
                     <span
                       className="
                       text-sm
+                      flex-1
+                      break-words
                       text-slate-700
                       dark:text-[#e8eaf2]
                       "
@@ -249,7 +261,6 @@ export default function About() {
           </div>
 
         </div>
-
       </div>
     </section>
   );
