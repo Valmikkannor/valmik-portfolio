@@ -63,8 +63,8 @@ export const projects = [{
         tags: ["Full Stack", "MongoDB, EJS, Express, Node"],
         accentColor: "#00d9ff",
         bgGradient: "rgba(0,217,255,0.12)",
-        liveUrl: "#",
-        githubUrl: "#",
+        liveUrl: "https://wanderlust-kuvz.onrender.com/listings",
+        githubUrl: "https://github.com/Valmikkannor/wanderlust",
         coming: false,
     },
     {

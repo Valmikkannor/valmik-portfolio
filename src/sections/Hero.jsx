@@ -316,7 +316,7 @@ export default function Hero() {
                 sm:left-[-15px]
                 "
               >
-                <StatCard
+                {/* <StatCard
                   num="6+"
                   label="Months Experience"
                 />
@@ -324,7 +324,7 @@ export default function Hero() {
                 <StatCard
                   num="3+"
                   label="Projects Built"
-                />
+                /> */}
               </div>
 
             </div>
